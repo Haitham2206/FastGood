@@ -1,4 +1,4 @@
-package haitham.kinneret.fastgoodfood;
+package haitham.kinneret.fastgoodfood.BackgroundWorkAndAdapters;
 /**
  * Created by Haitham + Fares on 1/30/2018.
  */
@@ -11,14 +11,14 @@ public class  Food {
     private String cookingStyle;
     private String steps;
 
-    public Food(String recipe, byte[] image, String cookingStyle, String steps) {
+    Food(String recipe, byte[] image, String cookingStyle, String steps) {
         this.recipe = recipe;
         this.image = image;
         this.cookingStyle = cookingStyle;
         this.steps = steps;
     }
 
-    public String getRecipe() {
+    String getRecipe() {
         return recipe;
     }
 
@@ -26,7 +26,7 @@ public class  Food {
         this.recipe = recipe;
     }
 
-    public byte[] getImage() {
+    byte[] getImage() {
         return image;
     }
 

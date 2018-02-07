@@ -15,11 +15,11 @@ import haitham.kinneret.fastgoodfood.R;
  */
 
 
-public class SearchAdabter extends CursorAdapter {
+public class SearchAdapter extends CursorAdapter {
 
     private LayoutInflater mInflater;
 
-    public SearchAdabter(Context context, Cursor c, int flags) {
+    public SearchAdapter(Context context, Cursor c, int flags) {
         super(context, c, flags);
         mInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }

@@ -1,4 +1,4 @@
-package haitham.kinneret.fastgoodfood;
+package haitham.kinneret.fastgoodfood.Activities;
 
 import android.annotation.TargetApi;
 import android.app.SearchManager;
@@ -17,12 +17,13 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import haitham.kinneret.fastgoodfood.BackgroundWorkAndAdapters.SearchAdabter;
+import haitham.kinneret.fastgoodfood.BackgroundWorkAndAdapters.SearchAdapter;
 import haitham.kinneret.fastgoodfood.DatabaseManager.DatabaseAccess;
+import haitham.kinneret.fastgoodfood.R;
 
 public class SearchActivity extends AppCompatActivity {
 
-    private SearchAdabter searchAdabter;
+    private SearchAdapter searchAdapter;
     ListView listView;
     Cursor cursor;
     private final static String TAG= MainActivity.class.getName().toString();
@@ -33,10 +34,10 @@ public class SearchActivity extends AppCompatActivity {
         DatabaseAccess databaseAccess = DatabaseAccess.getInstance(this);
         databaseAccess.open();
         cursor = databaseAccess.getIngredientRecipeList();
-        searchAdabter = new SearchAdabter(SearchActivity.this,cursor,0);
+        searchAdapter = new SearchAdapter(SearchActivity.this,cursor,0);
         listView = (ListView) findViewById(R.id.lstIngredients);
 
-        listView.setAdapter(searchAdabter);
+        listView.setAdapter(searchAdapter);
         databaseAccess.close();
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -80,7 +81,7 @@ public class SearchActivity extends AppCompatActivity {
                 }else{
                     Toast.makeText(SearchActivity.this, cursor.getCount() + " records found!",Toast.LENGTH_LONG).show();
                 }
-                searchAdabter.swapCursor(cursor);
+                searchAdapter.swapCursor(cursor);
                 databaseAccess.close();
                 return false;
             }
@@ -92,7 +93,7 @@ public class SearchActivity extends AppCompatActivity {
                 Log.d(TAG, "onQueryTextChange ");
                 cursor=databaseAccess.getIngredientRecipeByKeyboard(s);
                 if (cursor!=null){
-                    searchAdabter.swapCursor(cursor);
+                    searchAdapter.swapCursor(cursor);
                 }
                 databaseAccess.close();
                 return false;

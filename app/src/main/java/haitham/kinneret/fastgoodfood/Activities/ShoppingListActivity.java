@@ -1,4 +1,4 @@
-package haitham.kinneret.fastgoodfood;
+package haitham.kinneret.fastgoodfood.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -29,6 +29,8 @@ import android.widget.Toast;
 import android.widget.AdapterView;
 import android.widget.TextView;
 import android.view.View;
+
+import haitham.kinneret.fastgoodfood.R;
 
 public class ShoppingListActivity extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package haitham.kinneret.fastgoodfood;
+package haitham.kinneret.fastgoodfood.Activities;
 
 import android.Manifest;
 import android.content.Intent;
@@ -27,6 +27,7 @@ import java.util.ArrayList;
 import haitham.kinneret.fastgoodfood.AskForPermissions.PermissionResultCallback;
 import haitham.kinneret.fastgoodfood.AskForPermissions.PermissionUtils;
 import haitham.kinneret.fastgoodfood.BackgroundWorkAndAdapters.ViewPagerAdapter;
+import haitham.kinneret.fastgoodfood.R;
 
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener,
@@ -90,7 +91,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
 
         //change ViewPager page when tab selected
-        tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 viewPager.setCurrentItem(tab.getPosition());

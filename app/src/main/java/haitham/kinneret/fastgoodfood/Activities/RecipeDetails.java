@@ -1,25 +1,19 @@
-package haitham.kinneret.fastgoodfood;
+package haitham.kinneret.fastgoodfood.Activities;
 
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.os.Vibrator;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import haitham.kinneret.fastgoodfood.BackgroundWorkAndAdapters.CustomAdapter;
 import haitham.kinneret.fastgoodfood.DatabaseManager.DatabaseAccess;
-
-import static android.widget.Toast.*;
+import haitham.kinneret.fastgoodfood.R;
 
 public class RecipeDetails extends AppCompatActivity {
 

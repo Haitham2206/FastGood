@@ -1,4 +1,4 @@
-package haitham.kinneret.fastgoodfood;
+package haitham.kinneret.fastgoodfood.Activities;
 
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.text.Html;
 import android.text.Spanned;
 import android.widget.TextView;
+
+import haitham.kinneret.fastgoodfood.R;
 
 /**
  * Created by Haitham + Fares on 1/13/2018.

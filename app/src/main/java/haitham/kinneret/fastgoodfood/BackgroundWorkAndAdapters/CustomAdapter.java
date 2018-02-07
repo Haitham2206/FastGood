@@ -18,9 +18,8 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 
-import haitham.kinneret.fastgoodfood.Food;
 import haitham.kinneret.fastgoodfood.R;
-import haitham.kinneret.fastgoodfood.RecipeDetails;
+import haitham.kinneret.fastgoodfood.Activities.RecipeDetails;
 
 /**
  * Created by Haitham + Fares on 1/26/2018.

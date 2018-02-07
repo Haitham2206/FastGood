@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="haitham.kinneret.fastgoodfood.RecipeDetails"
+    tools:context="haitham.kinneret.fastgoodfood.Activities.RecipeDetails"
     tools:ignore="ScrollViewCount"
     android:orientation="vertical"
     android:paddingStart="6dp">
